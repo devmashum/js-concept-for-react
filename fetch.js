@@ -7,12 +7,12 @@ const student = {
 
 
 const studentJSON = JSON.stringify(student);
-console.log(student);
-console.log(studentJSON);
+// console.log(student);
+// console.log(studentJSON);
 
 
 const products = [
-    { name: 'Laptop', price: 3200, brand: 'lenovo', color: 'silver' },
+    { name: 'laptop', price: 3200, brand: 'lenovo', color: 'silver' },
     { name: 'phone', price: 7000, brand: 'iphone', color: 'golden' },
     { name: 'watch', price: 3000, brand: 'casio', color: 'yellow' },
     { name: 'sunglass', price: 300, brand: 'ribon', color: 'black' },
@@ -26,5 +26,12 @@ const newProduct = { name: 'webcam', price: 12000, brand: 'orelyo' };
 
 const newProducts = [...products, newProduct];
 
-console.log(newProducts);
+// console.log(newProducts);
 
+const remaining = products.filter(product => product.name !== 'phone');
+
+// console.log(remaining);
+
+const newProducts1 = [...remaining, newProduct];
+
+console.log(newProducts1);
